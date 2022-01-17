@@ -1,0 +1,94 @@
+{
+  "stock": [
+    {
+      "id": "55af1e37-0734-46d8-b070-a1e42e4fc392",
+      "amount": 3
+    },
+    {
+      "id": "2e231109-0ecb-4014-8b1c-8bc91ee8860a",
+      "amount": "33"
+    },
+    {
+      "id": "9ace5cc9-d674-417c-a6d4-0def6ad930fe",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "21dd0cd8-4924-4b76-a86e-6d90236d2e3f",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "5ea39f25-1a14-477f-88aa-f328f6b30ab8",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "7defdfc0-e0e7-421c-9349-baa07253d1f1",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "15f504c1-d1be-4c16-801f-17cf8c79b7cf",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "7d67fb24-1742-4d5a-873e-030113366bb2",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "7628dcb1-19be-4e20-916a-c8bf2c4fb180",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "64366eee-f536-44a0-9599-c9bfe40a2e1c",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "ddad230e-0e2c-478f-9c6c-4af0805c2d66",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "9e1060d4-df33-43b8-95c2-30c8be8d267f",
+      "amount": "Teste quantidade"
+    }
+  ],
+  "products": [
+    {
+      "id": "7d67fb24-1742-4d5a-873e-030113366bb2",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/c2193ad4-3fa9-439c-b685-4072fdf4eda0.jpg"
+    },
+    {
+      "id": "7628dcb1-19be-4e20-916a-c8bf2c4fb180",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/42135501-978b-4dbc-a3f5-fba904993702.jpg"
+    },
+    {
+      "id": "64366eee-f536-44a0-9599-c9bfe40a2e1c",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/6d775148-8af5-475e-9dfe-ac3b9df0a946.jpg"
+    },
+    {
+      "id": "ddad230e-0e2c-478f-9c6c-4af0805c2d66",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/a5bac53e-e60c-4a4f-8d37-19f51dd7fc16.jpg"
+    },
+    {
+      "id": "9e1060d4-df33-43b8-95c2-30c8be8d267f",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/be173e83-09b0-47a4-bad3-861947441c18.jpg"
+    }
+  ]
+}
