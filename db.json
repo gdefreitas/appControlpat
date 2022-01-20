@@ -47,6 +47,22 @@
     {
       "id": "9e1060d4-df33-43b8-95c2-30c8be8d267f",
       "amount": "Teste quantidade"
+    },
+    {
+      "id": "81028ecd-7acb-41df-be1a-b6500a207778",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "5374548e-a4d3-4272-ad96-fba90c20eb60",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "3e89d46a-5b38-4a4a-a2c2-de809e2f4e65",
+      "amount": "Teste quantidade"
+    },
+    {
+      "id": "14745698-e372-4be0-a411-f3816cdec533",
+      "amount": "Teste quantidade"
     }
   ],
   "products": [
@@ -89,6 +105,38 @@
       "codigo": "Reste código",
       "modelo": "Teste modelo",
       "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/be173e83-09b0-47a4-bad3-861947441c18.jpg"
+    },
+    {
+      "id": "81028ecd-7acb-41df-be1a-b6500a207778",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/5ce226fa-d8c1-4d8b-9599-cd9d39e18f31.jpg"
+    },
+    {
+      "id": "5374548e-a4d3-4272-ad96-fba90c20eb60",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/5855c6f5-dbe7-4341-9be5-cc23b4b3bfa2.jpg"
+    },
+    {
+      "id": "3e89d46a-5b38-4a4a-a2c2-de809e2f4e65",
+      "produto": "Teste Produto",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/0747855c-dfb9-4ee4-830f-82e69d7a6b04.jpg"
+    },
+    {
+      "id": "14745698-e372-4be0-a411-f3816cdec533",
+      "produto": "computador",
+      "marca": "Teste marca",
+      "codigo": "Reste código",
+      "modelo": "Teste modelo",
+      "image": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FApp-faaf664a-cfef-44ee-ac0f-391ee2c59718/ImagePicker/23b19e9b-175f-47a5-b708-20af2e003536.mp4"
     }
   ]
 }

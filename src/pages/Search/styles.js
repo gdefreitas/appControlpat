@@ -23,9 +23,9 @@ export default styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   info: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
-    color: Cinza,
+    color: '#299FCE',
   },
   list: {
     margin: 0,
@@ -37,5 +37,6 @@ export default styles = StyleSheet.create({
       width: '90%',
       alignSelf: 'center',
       opacity: 0.5
+      
   }
 });

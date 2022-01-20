@@ -61,33 +61,47 @@ const mockProduto = [
 
 function Search() {
   const [products, setProducts] = useState([]);
+  const [productscopy, setProductscopy] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  
 
   useEffect(() => {
     async function getAllProducts() {
       const response = await api.get('/products');
       setProducts(response.data);
+      setProductscopy(response.data);
       setIsLoading(false);
     }
 
     getAllProducts();
   }, []);
  
+  function handleSearch(searchValue) {
+    const result = productscopy
+      .filter(
+        (product) => product.produto
+          .toLowerCase()
+          .includes(searchValue.toLowerCase()),
+      );
+    setProducts(result);
+  }
+
   return (
     <View style={styles.container}>
       <Text>
-        { isLoading ? 'Carregando...' : `Tenho: ${products.length} produtos` }
+       
       </Text>
 
       <Bar>Pesquisar</Bar>
       <View style={styles.search}>
         <SearchSVG fill={Cinza} />
-        <TextInput style={styles.input} />
+        <TextInput onChangeText={handleSearch} style={styles.input} />
       </View>
       <View style={styles.containerInfo}>
-        <Text style={styles.info}>Total Disponíveis: 2</Text>
-        <Text style={styles.info}>Total Cadastrados: 3</Text>
+        {/*<Text style={styles.info}>Total Disponíveis: </Text>*/}
+        <Text style={styles.info}> Itens Cadastrados{ isLoading ? 'Carregando...' : `: ${products.length} itens` } </Text>
       </View>
+      
       
 
       <FlatList
@@ -104,16 +118,19 @@ function Search() {
                 height: 100,
                 width: 100,
                 borderRadius: 50,
+                
               }}
             />
 
-            <Text>PRODUCT NAME: {item.produto}</Text>
-            <Text>PRODUCT MARCA: {item.marca}</Text>
-            <Text>PRODUCT CODIGO: {item.codigo}</Text>
-            <Text>PRODUCT MODELO: {item.modelo}</Text>
+            <Text style={styles.info}> NOME:   {item.produto}</Text>
+            <Text style={styles.info}> MARCA:  {item.marca}</Text>
+            <Text style={styles.info}> CODIGO: {item.codigo}</Text>
+            <Text style={styles.info}> MODELO: {item.modelo}</Text>
           </View>
         )}
       />
+        
+
     </View>
   );
 }
