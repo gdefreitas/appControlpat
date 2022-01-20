@@ -58,7 +58,7 @@ $ yarn start
 
 * **Thiago Baia** - *Desenvolvedor Mobile* - [thiagobaia](https://github.com/thiagobaia)
 * **Gabriel Freitas** - *Desenvolvedor Mobile* - [gdefreitas](https://github.com/gdefreitas)
-* **Rafael Garcia** - *Desenvolvedor Mobile* - [RafaelVenons](https://github.com/RafaelVenons)
+
 
 ---
 ⌨️ com ❤️ por [TraineerDeV](https://github.com/TraineerDeV) 😊
