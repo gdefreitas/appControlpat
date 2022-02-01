@@ -27,7 +27,7 @@ Você pode verificar como intalar essas foramentas nos links abaixo.
 Primeiramente você vai precisar fazer o clone do projeto para sua maquina atraves do GIT:
 
 ```
-$ git clone https://github.com/TraineerDeV/App.git
+$ git clone https://github.com/gdefreitas/appControlpat.git
 ```
 
 Entrar na pasta do projeto:
@@ -58,7 +58,7 @@ $ yarn start
 
 * **Thiago Baia** - *Desenvolvedor Mobile* - [thiagobaia](https://github.com/thiagobaia)
 * **Gabriel Freitas** - *Desenvolvedor Mobile* - [gdefreitas](https://github.com/gdefreitas)
-* **Rafael Garcia** - *Desenvolvedor Mobile* - [RafaelVenons](https://github.com/RafaelVenons)
+
 
 ---
 ⌨️ com ❤️ por [TraineerDeV](https://github.com/TraineerDeV) 😊
