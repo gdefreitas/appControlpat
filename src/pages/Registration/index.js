@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRoute } from "@react-navigation/native"
 import { View, Text, TouchableOpacity, Platform, Image, Alert } from "react-native";
 import { v4 as uuidv4 } from 'uuid';
 import styles from "./styles.js";
@@ -11,12 +12,14 @@ import Store from "../../services/store.js";
 import axios from "axios";
 import { api } from "../../services/api.js";
 function Registration() {
-  
-  const [produto, setProduto] = useState("Teste Produto");
-  const [marca, setMarca] = useState("Teste marca");
-  const [codigo, setCodigo] = useState("Reste código");
-  const [modelo, setModelo] = useState("Teste modelo");
-  const [quantidade, setQuantidade] = useState("Teste quantidade");
+
+  const route = useRoute();
+  console.log(route);
+  const [produto, setProduto] = useState("");
+  const [marca, setMarca] = useState("");
+  const [codigo, setCodigo] = useState("");
+  const [modelo, setModelo] = useState("");
+  const [quantidade, setQuantidade] = useState("");
   const [image, setImage] = useState(null);
 
   useEffect(() => {
@@ -55,7 +58,7 @@ function Registration() {
         [
           {
             text: "OK",
-            onPress: () => {}
+            onPress: () => { }
           }
         ]
       )
@@ -76,11 +79,12 @@ function Registration() {
       'marca': marca,
       'codigo': codigo,
       'modelo': modelo,
-      'image': image
+      'image': image,
+      
     }
 
     try {
-      
+
 
       const productResponse = await api.post('/products', data);
       // Caso o ID do produto no db.json vier diferente do id do produto em stock, deve ser passado no lugar do productStock o objeto com:
@@ -107,19 +111,19 @@ function Registration() {
       );
     }
 
-    
 
-   /* await fetch("http:// 192.168.0.104:3000/products", {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: "POST", 
-      body: JSON.stringify(data)
-    })
-  */
 
-    
+    /* await fetch("http:// 192.168.0.104:3000/products", {
+       headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json'
+       },
+       method: "POST", 
+       body: JSON.stringify(data)
+     })
+   */
+
+
     setProduto('');
     setMarca('');
     setCodigo('');
@@ -183,10 +187,10 @@ function Registration() {
         style={styles.button}
         mode="contained"
         onPress={post}
-        
+
       >
         <Text style={styles.buttonText}>Cadastrar</Text>
-        
+
       </Button>
     </View>
   );

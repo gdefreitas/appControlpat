@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { TextInput, View, Text, FlatList, Image } from "react-native";
+import { TextInput, View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import { Link } from 'react-router-native';
 import Bar from "../../components/Bar";
 import SearchSVG from "../../assets/search_white_48dp.svg";
 import styles from "./styles";
 import { Cinza, Branco } from "../../styles";
 import Item from "../../components/Item";
-import Pagination from "../../components/Pagination";
 import Store from "../../services/store";
 import { api } from '../../services/api';
+import {useNavigation} from  "@react-navigation/native"
+
 
 const mockProduto = [
   {
@@ -63,7 +64,7 @@ function Search() {
   const [products, setProducts] = useState([]);
   const [productscopy, setProductscopy] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  
+  const navigation = useNavigation();
 
   useEffect(() => {
     async function getAllProducts() {
@@ -88,9 +89,7 @@ function Search() {
 
   return (
     <View style={styles.container}>
-      <Text>
-       
-      </Text>
+      
 
       <Bar>Pesquisar</Bar>
       <View style={styles.search}>
@@ -99,26 +98,27 @@ function Search() {
       </View>
       <View style={styles.containerInfo}>
         {/*<Text style={styles.info}>Total Disponíveis: </Text>*/}
-        <Text style={styles.info}> Itens Cadastrados{ isLoading ? 'Carregando...' : `: ${products.length} itens` } </Text>
+        <Text style={styles.info}> { isLoading ? 'Carregando...' : ` ${products.length} itens` }   Cadastrados </Text>
       </View>
-      
-      
 
       <FlatList
         data={products}
         keyExtractor={item => String(item.id)}
-        renderItem={({ item }) => (
-          <View style={{
-            marginBottom: 10,
-            backgroundColor: '#ddd',
-          }}>
+        renderItem={({ item }) => ( 
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Withdraw', item)}
+            style={{
+              marginBottom: 10,
+              backgroundColor: '#ddd',
+            }}
+          >
             <Image
               source={{ uri: item.image }}
               style={{
                 height: 100,
                 width: 100,
                 borderRadius: 50,
-                
+
               }}
             />
 
@@ -126,11 +126,10 @@ function Search() {
             <Text style={styles.info}> MARCA:  {item.marca}</Text>
             <Text style={styles.info}> CODIGO: {item.codigo}</Text>
             <Text style={styles.info}> MODELO: {item.modelo}</Text>
-          </View>
+            {/* <Text style={styles.info}>QUANTIDADE: {item.Quantidade}</Text> */}
+          </TouchableOpacity>
         )}
       />
-        
-
     </View>
   );
 }

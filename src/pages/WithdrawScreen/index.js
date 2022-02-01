@@ -1,11 +1,19 @@
 import React from "react";
 import { Text, TouchableOpacity, View, Image } from "react-native";
+
+import { useRoute } from '@react-navigation/native';
 import Bar from "../../components/Bar";
 import { Branco } from "../../styles";
 import styles from "./styles";
 
 
 function Withdraw() {
+    const route = useRoute();
+
+    console.log('DADOS DO ITEM: ', route.params);
+
+    const product = route?.params;
+
     return (
         <View style={styles.container}>
             <Bar >RETIRADA</Bar>
@@ -14,15 +22,20 @@ function Withdraw() {
                     <View style={styles.sideBySide}>
 
                         <Image
-                            style={styles.image}
-                            source={require('../../../src/assets/notebook.png')}
+                            style={{
+                                height: 100,
+                                width: 100,
+                                borderRadius: 50,}}
+                            source={{ uri: route.params.image }}
                         />
 
                         <View>
-                            <Text style={styles.cardTextTitle}>Notebook</Text>
-                            <Text style={styles.cardText}>MODELO: TF8-ERH</Text>
-                            <Text style={styles.cardText}>MARCA: DELL</Text>
-                            <Text style={styles.cardText}>COD: 2548-SDS</Text>
+                            <Text style={styles.cardTextTitle}>{product.produto}</Text>
+                            <Text style={styles.cardText}>{product.marca}</Text>
+                            <Text style={styles.cardText}>{product.codigo}</Text>
+                            <Text style={styles.cardText}>{product.modelo}</Text>
+                            
+                            
                         </View>
                     </View>
 
