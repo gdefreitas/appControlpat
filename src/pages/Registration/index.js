@@ -133,7 +133,7 @@ function Registration() {
 
   return (
     <View style={styles.container}>
-      <Bar>Cadastro</Bar>
+      
       <TextInput
         style={styles.input}
         mode="outlined"

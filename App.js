@@ -11,16 +11,17 @@ import Registration from "./src/pages/Registration";
 import Search from "./src/pages/Search";
 import Routes from "./src/routes";
 import styles, { theme } from "./src/styles";
+import  Dispatch  from "./src/pages/Dispatch";
 
 export default function App() {
   return (
 
     // <NativeRouter>
-      <PaperProvider theme={theme}>
+      // <PaperProvider theme={theme}>
         <View style={styles.container}>
           <StatusBar hidden={true} />
-          { /*<Withdraw /> */}
-          <Routes />
+          {/* <Dispatch/>  */}
+           <Routes />
           {/*<Route exact path='/' component={Home} />
           <Route exact path='/registration' component={Registration} />
           <Route exact path='/search' component={Search} />
@@ -28,9 +29,9 @@ export default function App() {
           <Route exact path="/search/:id" component={Historic} />
           <Route exact path="/withdraw" component={Withdraw} />
         */}
-  
+   
         </View>
-      </PaperProvider>
+      // </PaperProvider>
     // </NativeRouter>
 
   );

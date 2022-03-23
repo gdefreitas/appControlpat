@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes"
 import { Branco, Cinza } from "../../styles"
 
 export default styles = StyleSheet.create({
@@ -31,7 +32,8 @@ export default styles = StyleSheet.create({
     button: {
         marginHorizontal: 16,
         height: 52,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#299FCE'
     },
     buttonText: {
         color: Branco

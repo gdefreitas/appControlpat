@@ -24,5 +24,7 @@ export default styles = StyleSheet.create({
       fontSize: 16,
       fontWeight: 'bold',
       textTransform: 'uppercase'
-  }
+  },
+
+  
 });

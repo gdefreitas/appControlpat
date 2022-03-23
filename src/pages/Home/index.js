@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <View style={styles.container}>
-      <Bar home>Controle de Patrimonio</Bar>
+     
 
       <TouchableOpacity onPress={() => navigation.navigate("Home")}>
         <View style={styles.card}>
@@ -39,7 +39,7 @@ function Home() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+      <TouchableOpacity onPress={() => navigation.navigate("Dispatch")}>
         <View style={styles.card}>
         <RemoveSVG fill={Cinza} />
         <Text style={styles.cardText}>Despachar</Text>

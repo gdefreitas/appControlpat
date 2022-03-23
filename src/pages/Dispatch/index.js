@@ -4,7 +4,7 @@ import { useRoute } from '@react-navigation/native';
 import styles from "./styles";
 
 
-function Withdraw() {
+function Dispatch() {
     const route = useRoute();
 
     console.log('DADOS DO ITEM: ', route.params);
@@ -13,7 +13,6 @@ function Withdraw() {
 
     return (
         <View style={styles.container}>
-            
             <View style={styles.card}>
                 <View>
                     <View style={styles.sideBySide}>
@@ -22,22 +21,21 @@ function Withdraw() {
                             style={{
                                 height: 100,
                                 width: 100,
-                                borderRadius: 50,}}
-                            source={{ uri: route.params.image }}
+                                borderRadius: 50
+                            }}
+                            /*source={{ uri: route.params.image }}*/
+
                         />
 
                         <View>
-                            <Text style={styles.cardTextTitle}>{product.produto}</Text>
+                          {/*  <Text style={styles.cardTextTitle}>{product.produto}</Text>
                             <Text style={styles.cardText}>{product.marca}</Text>
                             <Text style={styles.cardText}>{product.codigo}</Text>
                             <Text style={styles.cardText}>{product.modelo}</Text>
-                            
-                            
+
+                         */}
                         </View>
                     </View>
-
-
-
 
                     <View style={styles.mainContent}>
 
@@ -47,7 +45,7 @@ function Withdraw() {
                     </View>
 
                     <TouchableOpacity style={styles.card_Button}>
-                        <Text style ={styles.font_button}>Retirar</Text>
+                        <Text style={styles.font_button}>Despachar</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.card_Button2}>
                         <Text style={styles.font_button2}>Histórico</Text>
@@ -65,4 +63,4 @@ function Withdraw() {
     );
 }
 
-export default Withdraw;
+export default Dispatch;

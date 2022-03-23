@@ -8,56 +8,8 @@ import { Cinza, Branco } from "../../styles";
 import Item from "../../components/Item";
 import Store from "../../services/store";
 import { api } from '../../services/api';
-import {useNavigation} from  "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 
-
-const mockProduto = [
-  {
-    id: 1,
-    produto: "NOTEBOOK",
-    marca: "DELL",
-    codigo: 12345,
-    modelo: "XPS-13",
-    disponivel: true,
-    image: {
-      cancelled: false,
-      height: 960,
-      type: "image",
-      uri: "file:///data/user/0/host.exp.exponent/cache/ExperienceData/UNVERIFIED-192.168.0.104-App/ImagePicker/9bfe6c2c-9a49-4b3a-ad00-282b80ad8d3a.jpg",
-      width: 960,
-    },
-  },
-  {
-    id: 2,
-    produto: "NOTEBOOK",
-    marca: "DELL",
-    codigo: 12346,
-    modelo: "XPS-13",
-    disponivel: true,
-    image: {
-      cancelled: false,
-      height: 960,
-      type: "image",
-      uri: "file:///data/user/0/host.exp.exponent/cache/ExperienceData/UNVERIFIED-192.168.0.104-App/ImagePicker/9bfe6c2c-9a49-4b3a-ad00-282b80ad8d3a.jpg",
-      width: 960,
-    },
-  },
-  {
-    id: 3,
-    produto: "NOTEBOOK",
-    marca: "DELL",
-    codigo: 12347,
-    modelo: "XPS-13",
-    disponivel: false,
-    image: {
-      cancelled: false,
-      height: 960,
-      type: "image",
-      uri: "file:///data/user/0/host.exp.exponent/cache/ExperienceData/UNVERIFIED-192.168.0.104-App/ImagePicker/9bfe6c2c-9a49-4b3a-ad00-282b80ad8d3a.jpg",
-      width: 960,
-    }
-  },
-];
 
 
 function Search() {
@@ -76,7 +28,7 @@ function Search() {
 
     getAllProducts();
   }, []);
- 
+
   function handleSearch(searchValue) {
     const result = productscopy
       .filter(
@@ -89,22 +41,22 @@ function Search() {
 
   return (
     <View style={styles.container}>
-      
 
-      <Bar>Pesquisar</Bar>
+
+
       <View style={styles.search}>
         <SearchSVG fill={Cinza} />
         <TextInput onChangeText={handleSearch} style={styles.input} />
       </View>
       <View style={styles.containerInfo}>
         {/*<Text style={styles.info}>Total Disponíveis: </Text>*/}
-        <Text style={styles.info}> { isLoading ? 'Carregando...' : ` ${products.length} itens` }   Cadastrados </Text>
+        <Text style={styles.info}> {isLoading ? 'Carregando...' : ` ${products.length} itens`}   Cadastrados </Text>
       </View>
 
       <FlatList
         data={products}
         keyExtractor={item => String(item.id)}
-        renderItem={({ item }) => ( 
+        renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => navigation.navigate('Withdraw', item)}
             style={{
@@ -122,10 +74,10 @@ function Search() {
               }}
             />
 
-            <Text style={styles.info}> NOME:   {item.produto}</Text>
-            <Text style={styles.info}> MARCA:  {item.marca}</Text>
-            <Text style={styles.info}> CODIGO: {item.codigo}</Text>
-            <Text style={styles.info}> MODELO: {item.modelo}</Text>
+            <Text style={styles.info}> NOME:   {item.produto} </Text>
+            <Text style={styles.info}> MARCA:  {item.marca}   </Text>
+            <Text style={styles.info}> CODIGO: {item.codigo}  </Text>
+            <Text style={styles.info}> MODELO: {item.modelo}  </Text>
             {/* <Text style={styles.info}>QUANTIDADE: {item.Quantidade}</Text> */}
           </TouchableOpacity>
         )}
